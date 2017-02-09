@@ -21,18 +21,19 @@
         android:weightSum="1">
 
         <Button
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnChangeImage"
+            android:id="@+id/button2"
             android:layout_weight="0.07"
-            android:onClick="pic" />
+            android:onClick="pic2" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/screen_background_light"
             android:id="@+id/imageView1"
-            android:layout_weight="0.18" />
+            android:layout_weight="0.29" />
 
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
@@ -43,15 +44,22 @@
             android:id="@+id/toolbar2"
             android:clickable="true"
             android:onClick="Vibrate"
-            android:layout_weight="0.05"
+            android:layout_weight="0.07"
             android:contextClickable="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChangeImage"
+            android:layout_weight="0.07"
+            android:onClick="pic" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:srcCompat="@android:drawable/stat_sys_warning"
             android:id="@+id/MimageView"
-            android:layout_weight="0.53"
+            android:layout_weight="0.31"
             android:clickable="true"
             android:onClick="dispatchTakePictureIntent" />
 

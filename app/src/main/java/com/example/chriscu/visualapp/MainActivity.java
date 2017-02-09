@@ -72,6 +72,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    public  void pic2 (View view) {
+
+        image = (ImageView) findViewById(R.id.imageView1);
+
+        button = (Button) findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                image.setImageResource(R.mipmap.diff);
+            }
+
+        });
+
+    }
 
 
     public void Vibrate (View view) {
