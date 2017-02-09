@@ -29,7 +29,9 @@
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:layout_weight="0.82" />
+            android:layout_weight="0.82"
+            android:clickable="true"
+            android:onClick="Vibrate" />
     </LinearLayout>
 
     <android.support.design.widget.AppBarLayout
@@ -38,13 +40,5 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </android.support.design.widget.CoordinatorLayout>
