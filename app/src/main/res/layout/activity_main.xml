@@ -7,11 +7,32 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.chriscu.visualapp.MainActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChangeImage"
+            android:layout_weight="0.07"
+            android:onClick="pic" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/screen_background_light"
+            android:id="@+id/imageView1"
+            android:layout_weight="0.18" />
 
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
@@ -22,14 +43,15 @@
             android:id="@+id/toolbar2"
             android:clickable="true"
             android:onClick="Vibrate"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            android:contextClickable="false" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:srcCompat="@android:drawable/stat_sys_warning"
             android:id="@+id/MimageView"
-            android:layout_weight="0.82"
+            android:layout_weight="0.53"
             android:clickable="true"
             android:onClick="dispatchTakePictureIntent" />
 
@@ -40,16 +62,11 @@
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:layout_weight="0.82"
+            android:layout_weight="0.83"
             android:clickable="true"
             android:onClick="Vibrate" />
+
+
     </LinearLayout>
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-    </android.support.design.widget.AppBarLayout>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -3,8 +3,6 @@ package com.example.chriscu.visualapp;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.hardware.Camera;
-import android.hardware.Camera.CameraInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.provider.MediaStore;
@@ -14,9 +12,14 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    Button button;
+    ImageView image;
 
 
     @Override
@@ -49,10 +52,26 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
 
+    }
 
+    public  void pic (View view) {
 
+        image = (ImageView) findViewById(R.id.imageView1);
+
+        button = (Button) findViewById(R.id.btnChangeImage);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                image.setImageResource(R.mipmap.wh);
+            }
+
+        });
 
     }
+
+
+
 
 
     public void Vibrate (View view) {

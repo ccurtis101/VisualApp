@@ -28,4 +28,12 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
 
 
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webview1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
 </manifest>
