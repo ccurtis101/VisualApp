@@ -16,6 +16,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import static com.example.chriscu.visualapp.R.id.toolbar2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        Toolbar toolbar = (Toolbar) findViewById(toolbar2);
         setSupportActionBar(toolbar);
 
 
@@ -76,9 +79,22 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = simpleWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
+        Toast.makeText(getApplicationContext(), "webview Sports loading", Toast.LENGTH_LONG).show();
+
 
     }
 
+
+    public void changeView3 (View view) {
+
+        WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
+// specify the url of the web page in loadUrl function
+        simpleWebView.loadUrl("https://promotions.williamhill.com/#!/");
+        WebSettings webSettings = simpleWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        Toast.makeText(getApplicationContext(), "webview Promos loading", Toast.LENGTH_LONG).show();
+
+    }
 
 
 
@@ -89,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         simpleWebView.loadUrl("https://mobile.williamhill.com/vegas/en-gb/home");
         WebSettings webSettings = simpleWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        Toast.makeText(getApplicationContext(), "webview Vegas loading", Toast.LENGTH_LONG).show();
 
 
     }
@@ -113,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
 
    }
+
+
+
 
    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

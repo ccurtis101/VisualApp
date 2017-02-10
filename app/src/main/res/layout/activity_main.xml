@@ -7,6 +7,14 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.chriscu.visualapp.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar" />
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,23 +28,37 @@
         android:layout_height="match_parent"
         android:weightSum="1">
 
+        <TextClock
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textClock"
+            android:layout_weight="0.05"
+            android:clickable="true" />
+
         <WebView
             android:layout_width="match_parent"
             android:layout_height="129dp"
             android:id="@+id/simpleWebView"
-            android:layout_weight="0.86" />
+            android:layout_weight="1.10" />
 
         <Button
             android:text="VEGAS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:id="@+id/button"
             android:onClick="changeView2" />
 
         <Button
+            android:text="PROMOTIONS"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:id="@+id/button2"
+            android:onClick="changeView3" />
+
+        <Button
             android:text="SPORTS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:id="@+id/button4"
             android:onClick="changeView" />
 
