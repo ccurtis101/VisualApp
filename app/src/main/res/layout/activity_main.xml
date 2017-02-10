@@ -7,6 +7,19 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.chriscu.visualapp.MainActivity">
 
+    <TextView
+        android:id="@+id/scroller"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:text="Some veryyyyy long text with all the characters that cannot fit in screen, it so sad :( that I will not scroll"
+        android:layout_marginLeft="4dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +52,9 @@
             android:layout_width="match_parent"
             android:layout_height="129dp"
             android:id="@+id/simpleWebView"
-            android:layout_weight="1.10" />
+            android:layout_weight="1.10" >
+
+        </WebView>
 
         <Button
             android:text="VEGAS"
@@ -85,7 +100,6 @@
             android:onClick="Vibrate"
             android:contextClickable="false"
             android:layout_weight="1.32" />
-
 
     </LinearLayout>
 
