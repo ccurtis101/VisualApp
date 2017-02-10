@@ -46,21 +46,24 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:id="@+id/button"
-            android:onClick="changeView2" />
+            android:onClick="changeView2"
+            android:textSize="10sp" />
 
         <Button
             android:text="PROMOTIONS"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:id="@+id/button2"
-            android:onClick="changeView3" />
+            android:onClick="changeView3"
+            android:textSize="10sp" />
 
         <Button
             android:text="SPORTS"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:id="@+id/button4"
-            android:onClick="changeView" />
+            android:onClick="changeView"
+            android:textSize="10sp" />
 
         <ImageView
             android:layout_width="match_parent"
