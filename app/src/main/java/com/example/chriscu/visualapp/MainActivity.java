@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -26,8 +28,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // initiate a web view
+        WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
+// specify the url of the web page in loadUrl function
+        simpleWebView.loadUrl("https://sports.williamhill.com/betting/en-gb");
+        WebSettings webSettings = simpleWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
+
+
 
 
     }
@@ -54,84 +66,81 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public  void pic (View view) {
 
-        image = (ImageView) findViewById(R.id.imageView1);
 
-        button = (Button) findViewById(R.id.btnChangeImage);
-        button.setOnClickListener(new View.OnClickListener() {
+    public void changeView (View view) {
 
-            @Override
-            public void onClick(View arg0) {
-                image.setImageResource(R.mipmap.wh);
-            }
+        WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
+// specify the url of the web page in loadUrl function
+        simpleWebView.loadUrl("https://sports.williamhill.com/betting/en-gb");
+        WebSettings webSettings = simpleWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
-        });
 
     }
 
 
 
-    public  void pic2 (View view) {
 
-        image = (ImageView) findViewById(R.id.imageView1);
+    public void changeView2 (View view) {
 
-        button = (Button) findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+        WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
+// specify the url of the web page in loadUrl function
+        simpleWebView.loadUrl("https://mobile.williamhill.com/vegas/en-gb/home");
+        WebSettings webSettings = simpleWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
-            @Override
-            public void onClick(View arg0) {
-                image.setImageResource(R.mipmap.diff);
-            }
-
-        });
 
     }
 
 
-    public void Vibrate (View view) {
-        // Get instance of Vibrator from current Context
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-        // Output yes if can vibrate, no otherwise
-        if (v.hasVibrator()) {
-            Log.v("Can Vibrate", "YES");
 
-            // Vibrate for 400 milliseconds
-            v.vibrate(400);
-        } else {
-            Log.v("Can Vibrate", "NO");
+  public void Vibrate (View view) {
+       //  Get instance of Vibrator from current Context
+       Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+    //  Output yes if can vibrate, no otherwise
+      if (v.hasVibrator()) {
+           Log.v("Can Vibrate", "YES");
+
+         //   Vibrate for 400 milliseconds
+           v.vibrate(400);
+       } else {
+           Log.v("Can Vibrate", "NO");
         }
 
 
 
-    }
+   }
 
-    @Override
+   @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+       if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            ImageView mImageView = (ImageView) findViewById(R.id.MimageView);
-            mImageView.setImageBitmap(imageBitmap);
-        }
+           Bitmap imageBitmap = (Bitmap) extras.get("data");
+           ImageView mImageView = (ImageView) findViewById(R.id.MimageView);
+           mImageView.setImageBitmap(imageBitmap);
+       }
     }
 
 
 
 
-    @Override
+  @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+       // Handle action bar item clicks here. The action bar will
+//automatically handle clicks on the Home/Up button, so long
+      // as you specify a parent activity in AndroidManifest.xml.
+     int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+       //noinspection SimplifiableIfStatement
+      if (id == R.id.action_settings) {
+          return true;
+       }
 
-        return super.onOptionsItemSelected(item);
+       return super.onOptionsItemSelected(item);
     }
-}
+              }
+
+
