@@ -71,14 +71,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
-
-
     public void changeView (View view) {
 
         WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
@@ -120,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
   public void Vibrate (View view) {
        //  Get instance of Vibrator from current Context
        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -138,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
 
 
    }
-
 
 
 
@@ -164,8 +154,9 @@ public class MainActivity extends AppCompatActivity {
 
        //noinspection SimplifiableIfStatement
       if (id == R.id.action_settings) {
-          return true;
+                return true;
        }
+
 
        return super.onOptionsItemSelected(item);
     }

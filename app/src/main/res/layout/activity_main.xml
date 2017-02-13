@@ -50,9 +50,9 @@
 
         <WebView
             android:layout_width="match_parent"
-            android:layout_height="129dp"
+            android:layout_height="128dp"
             android:id="@+id/simpleWebView"
-            android:layout_weight="1.12" >
+            android:layout_weight="0.95" >
 
         </WebView>
 
@@ -60,7 +60,7 @@
         <Button
             android:text="VEGAS"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="32dp"
             android:id="@+id/button"
             android:onClick="changeView2"
             android:textSize="10sp" />
@@ -68,27 +68,19 @@
         <Button
             android:text="PROMOTIONS"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="32dp"
             android:id="@+id/button2"
             android:onClick="changeView3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            android:elevation="1dp" />
 
         <Button
             android:text="SPORTS"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="32dp"
             android:id="@+id/button4"
             android:onClick="changeView"
             android:textSize="10sp" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/screen_background_light"
-            android:id="@+id/MimageView"
-            android:layout_weight="0.13"
-            android:clickable="true"
-            android:onClick="Vibrate" />
 
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
@@ -102,7 +94,14 @@
             android:contextClickable="false"
             android:layout_weight="1.32" />
 
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/screen_background_light"
+            android:id="@+id/MimageView"
+            android:layout_weight="0.13"
+            android:clickable="true"
+            android:onClick="Vibrate" />
 
 
     </LinearLayout>
