@@ -16,7 +16,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 import static com.example.chriscu.visualapp.R.id.toolbar2;
 
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // initiate a web view
-        WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
+        WebView simpleWebView = (WebView) findViewById(R.id.simpleWebView);
 // specify the url of the web page in loadUrl function
         simpleWebView.loadUrl("https://sports.williamhill.com/betting/en-gb");
         WebSettings webSettings = simpleWebView.getSettings();
@@ -41,12 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(toolbar2);
         setSupportActionBar(toolbar);
-
-
-
-
-
-
+//add date to a text view
+        TextView tv = (TextView) findViewById(R.id.txtDate);
+        String ct = DateFormat.getDateInstance().format(new Date());
+        tv.setText(ct);
     }
 
 
@@ -56,9 +58,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-
-
 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -71,13 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-public void calendar (View view) {
 
 
-  //  CalendarView cal = (CalendarView) findViewById(R.id.calendar);
-  //  cal.setDate(new Date().getTime());
 
-}
+
 
 
 
