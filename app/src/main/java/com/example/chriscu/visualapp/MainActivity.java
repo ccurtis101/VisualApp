@@ -71,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+public void calendar (View view) {
+
+
+  //  CalendarView cal = (CalendarView) findViewById(R.id.calendar);
+  //  cal.setDate(new Date().getTime());
+
+}
 
 
 
