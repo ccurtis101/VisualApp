@@ -83,15 +83,6 @@
             android:contextClickable="false"
             android:layout_weight="1.32" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/screen_background_light"
-            android:id="@+id/MimageView"
-            android:layout_weight="0.13"
-            android:clickable="true"
-            android:onClick="Vibrate" />
-
 
     </LinearLayout>
 

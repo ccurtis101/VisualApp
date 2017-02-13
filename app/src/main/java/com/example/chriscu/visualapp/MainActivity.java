@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
            Bitmap imageBitmap = (Bitmap) extras.get("data");
-           ImageView mImageView = (ImageView) findViewById(R.id.MimageView);
+           ImageView mImageView = (ImageView) findViewById(R.id.action_settings);
            mImageView.setImageBitmap(imageBitmap);
        }
     }
