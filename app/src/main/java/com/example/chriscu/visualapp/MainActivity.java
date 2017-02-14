@@ -14,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,8 +26,6 @@ import static com.example.chriscu.visualapp.R.id.toolbar2;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button;
-    ImageView image;
 
 
     @Override
