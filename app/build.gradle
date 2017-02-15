@@ -40,4 +40,5 @@ dependencies {
         // more stuff, e.g., Mockito
         androidTestCompile 'junit:junit:4.12'
         androidTestCompile 'junit:junit:4.12'
+        androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     }
