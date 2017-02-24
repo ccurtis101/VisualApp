@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.chriscu.visualapp.MainActivity"
-    android:background="?android:attr/colorPressedHighlight">
+    android:background="@color/colorPrimary">
 
 
     <LinearLayout
@@ -15,8 +15,8 @@
         android:layout_height="match_parent"
         android:weightSum="1"
         android:scrollbarAlwaysDrawVerticalTrack="false"
-        android:background="?android:attr/colorPressedHighlight"
-        android:backgroundTint="?android:attr/colorPressedHighlight">
+        android:background="@color/colorPrimary"
+       >
 
         <TextClock
             android:layout_width="match_parent"
